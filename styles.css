@@ -1,0 +1,29 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+#word {
+    font-size: 4em;
+    font-weight: bold;
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+}
+
+button {
+    font-size: 2em;
+}
+
+#seen {
+    margin-left: 40%;
+}
+
+#word-area {
+    padding-bottom: 50px;
+}
