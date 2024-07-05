@@ -1,6 +1,7 @@
 html, body {
     margin: 0;
     height: 100%;
+    overflow: hidden;
 }
 
 #word {
@@ -10,9 +11,6 @@ html, body {
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: lightblue;
 }
 
@@ -21,9 +19,23 @@ button {
 }
 
 #seen {
-    margin-left: 40%;
+    margin-left: 40px;
+}
+
+#button-area {
+    display: flex;
+    flex-direction: row;
 }
 
 #word-area {
     padding-bottom: 50px;
 }
+
+.center-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    flex-direction: column;
+    }
