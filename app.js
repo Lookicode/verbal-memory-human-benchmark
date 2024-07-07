@@ -18,10 +18,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     })
     .catch((error) => console.error("Error fetching the text file:", error));
 
-  let currentWord = displayRandomWord(allWords);
-
+  displayRandomWord(allWords);
 });
-
 
 newWord.addEventListener("click", () => {
   let evaluatedWord = document.getElementById("word").innerText;
@@ -32,7 +30,7 @@ newWord.addEventListener("click", () => {
   currentWord = displayRandomWord(allWords);
   seenWords.push(evaluatedWord);
   score++;
-  document.getElementById("word").innerText = currentWord;
+  // document.getElementById("word").innerText = currentWord;
 });
 
 seenWord.addEventListener("click", () => {
@@ -43,11 +41,18 @@ seenWord.addEventListener("click", () => {
   }
   currentWord = displayRandomWord(allWords);
   score++;
-  document.getElementById("word").innerText = currentWord;
+  // document.getElementById("word").innerText = currentWord;
 });
 
-
 function displayRandomWord(allWords) {
+  // let's make it biased towards the not already seen words, make it 30% likely to see words that have already been seen
+  // TODO make the magic constant dependent on the ratio of already_seen_words/all_words
+  if (seenWords.length > 0 && Math.random() < 0.4) {
+    let randomSeenWord =
+      seenWords[Math.floor(Math.random() * seenWords.length)];
+    document.getElementById("word").innerText = randomSeenWord;
+    return randomSeenWord;
+  }
   let randomWord = allWords[Math.floor(Math.random() * allWords.length)];
   document.getElementById("word").innerText = randomWord;
   return randomWord;
