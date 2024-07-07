@@ -7,6 +7,8 @@ let score = 0;
 // dictionary of all words from the text file
 let allWords = [];
 
+let BIAS_TOWARDS_SEEN_WORDS = 0.4;
+
 document.addEventListener("DOMContentLoaded", async () => {
   await fetch("dictionary.txt")
     .then((response) => response.text())
@@ -46,8 +48,8 @@ seenWord.addEventListener("click", () => {
 
 function displayRandomWord(allWords) {
   // let's make it biased towards the not already seen words, make it 30% likely to see words that have already been seen
-  // TODO make the magic constant dependent on the ratio of already_seen_words/all_words
-  if (seenWords.length > 0 && Math.random() < 0.4) {
+  // TODO-CONSIDERATION make the magic constant dependent on the ratio of already_seen_words/all_words?
+  if (seenWords.length > 0 && Math.random() < BIAS_TOWARDS_SEEN_WORDS) {
     let randomSeenWord =
       seenWords[Math.floor(Math.random() * seenWords.length)];
     document.getElementById("word").innerText = randomSeenWord;
