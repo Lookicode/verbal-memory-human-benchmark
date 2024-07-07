@@ -1,3 +1,5 @@
+Add start button
+Reset game after game over
 Local highscore
 Global highscore
 Statistics - percentile of current game vs. other games
