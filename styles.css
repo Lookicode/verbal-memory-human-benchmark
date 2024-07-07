@@ -69,3 +69,11 @@ button {
     box-shadow: 0 5px #666;
     transform: translateY(4px);
   }
+
+  #icon-credit {
+    font-size: small;
+    color: grey;
+    position: absolute;
+    bottom: 3%;
+    right: 3%;
+  }
