@@ -68,6 +68,9 @@ async function startGame() {
     })
     .catch((error) => console.error("Error fetching the text file:", error));
 
+  newWord.style.display = "inline";
+  seenWord.style.display = "inline";
+
   displayRandomWord(allWords);
 }
 
@@ -76,5 +79,9 @@ function resetGame() {
   document.getElementById("word").innerText =
     "You scored " + score + " point(s)!";
   score = 0;
+  start.style.top = "55%";
+  start.innerText = "START OVER";
   start.style.display = "inline";
+  newWord.style.display = "none";
+  seenWord.style.display = "none";
 }
