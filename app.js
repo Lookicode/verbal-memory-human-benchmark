@@ -15,6 +15,7 @@ newWord.addEventListener("click", () => {
     resetGame();
     return;
   }
+  preventAccidentalDoubleClick(newWord);
   currentWord = displayRandomWord(allWords);
   seenWords.push(evaluatedWord);
   score++;
@@ -26,6 +27,7 @@ seenWord.addEventListener("click", () => {
     resetGame();
     return;
   }
+  preventAccidentalDoubleClick(seenWord);
   currentWord = displayRandomWord(allWords);
   score++;
 });
@@ -70,4 +72,13 @@ function resetGame() {
   start.style.display = "inline";
   newWord.style.display = "none";
   seenWord.style.display = "none";
+}
+
+function preventAccidentalDoubleClick(button) {
+  button.disabled = true;
+
+  // re-enable the button after a short delay
+  setTimeout(() => {
+    button.disabled = false;
+  }, 250);
 }
