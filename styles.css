@@ -39,3 +39,9 @@ button {
     min-height: 100vh;
     flex-direction: column;
     }
+
+#start {
+    position: absolute;
+    left: 30%;
+    top: 30%;
+}
