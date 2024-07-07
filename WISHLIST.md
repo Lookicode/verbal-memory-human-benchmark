@@ -1,6 +1,5 @@
-Add start button
-Reset game after game over
 Add visual stagger between new words and feedback to pressing button
+Add Get in touch section
 Local highscore
 Global highscore
 Statistics - percentile of current game vs. other games
