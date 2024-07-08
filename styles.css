@@ -77,3 +77,11 @@ button {
     bottom: 3%;
     right: 3%;
   }
+
+  #get-in-touch {
+    font-size: small;
+    color: grey;
+    position: absolute;
+    bottom: 3%;
+    left: 3%;
+  }
