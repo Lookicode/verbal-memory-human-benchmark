@@ -1,8 +1,8 @@
-# Word Memory (Human Benchmark minigame)
+# Verbal Memory (Human Benchmark minigame)
 
 Since the original Human Benchmark is not online at the moment, I wanted to go ahead and recreate the only minigame I was really good at. Have fun!
 
-https://lookicode.github.io/word-memory-human-benchmark/
+https://lookicode.github.io/verbal-memory-human-benchmark/
 
 ## How it works
 
